@@ -5,6 +5,7 @@ import (
     "testing"
 )
 
+// TestNewApp verifies that NewApp returns a non-nil app with default settings.
 func TestNewApp(t *testing.T) {
     app := NewApp(true)
     if app == nil {
@@ -18,6 +19,7 @@ func TestNewApp(t *testing.T) {
     }
 }
 
+// TestProcess verifies the successful processing of input data.
 func TestProcess(t *testing.T) {
     app := NewApp(false)
     result, err := app.Process("test data")
@@ -35,6 +37,7 @@ func TestProcess(t *testing.T) {
     }
 }
 
+// TestRun verifies the successful execution of the Run method.
 func TestRun(t *testing.T) {
     app := NewApp(false)
     err := app.Run("", "")
